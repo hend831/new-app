@@ -12,7 +12,7 @@ product :Iproduct
 const ProductCard = ({product}: IProps) => {
     const {title,description,imageUrl,category,price}= product;
   return (
-    <div className="max-w-sm md:max-w-lg lg:max-w-xl xl:max-w-2xl mx-auto md:mx-0 border   rounded-md flex flex-col">
+    <div className="max-w-sm md:max-w-lg lg:max-w-xl xl:max-w-2xl mx-auto md:mx-0 border    rounded-md flex flex-col">
         
         <Image imgUrl={imageUrl}
         alt={"product name"}
@@ -38,9 +38,9 @@ const ProductCard = ({product}: IProps) => {
         className="w-9 h-9 rounded-full object-center"/>
             
         </div>
-        <div className="flex items-center justify-between space-x-2">
-            <Button className="bg-indigo-700  " width="w-full"  children={"Edit"}/>
-            <Button className="bg-red-700  m-3 " width="w-full"  children={"Delete"}/>
+        <div className="flex items-center justify-between space-x-2 ">
+            <Button className= "  bg-indigo-700  " width="w-full"  children={"Edit"}/>
+            <Button className="bg-red-700   " width="w-full"  children={"Delete"}/>
             
         </div>
         </div>
