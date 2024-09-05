@@ -1,4 +1,4 @@
-import { Iproduct } from './../interfaces/index';
+import { IformInput, Iproduct } from './../interfaces/index';
 
 
 export const productList: Iproduct[] = [
@@ -111,4 +111,37 @@ export const productList: Iproduct[] = [
       }
     }
   ];
-  
+// List of input fields for adding a product
+export const formInputsList :IformInput [] = [
+  {
+    id: "productName",
+    name: "productName",
+    label: "Product Name",
+    type: "text",
+  },
+  {
+    id: "description",
+    name: "description",
+    label: "Description",
+    type: "text",
+  },
+  {
+    id: "price",
+    name: "price",
+    label: "Price",
+    type: "number",
+  },
+  {
+    id: "category",
+    name: "category",
+    label: "Category",
+    type: "select", // Will be handled as a dropdown
+    // options: ["Electronics", "Clothing", "Food", "Accessories"], // Example categories
+  },
+  {
+    id: "image",
+    name: "image",
+    label: "Product Image",
+    type: "file",
+  },
+];

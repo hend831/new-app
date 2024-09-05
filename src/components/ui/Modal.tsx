@@ -1,36 +1,31 @@
-
-import {  Dialog, DialogPanel, DialogTitle } from '@headlessui/react'
-import { ReactNode, useState } from 'react'
-import Button from './Button';
+import { Dialog, DialogPanel, DialogTitle } from '@headlessui/react';
+import { ReactNode } from 'react';
 
 interface IProps {
-    isOpen: boolean;
-    close: () => void;
-    title:string,
-    children:ReactNode,
-  }
-  
-  const Modal = ({ isOpen, close ,title,children}: IProps) => {
+  isOpen: boolean;
+  close: () => void;
+  title: string;
+  children: ReactNode;
+}
+
+const Modal = ({ isOpen, close, title, children }: IProps) => {
   return (
-    <>
-      <Dialog as="div" className="relative z-10 focus:outline-none" open={isOpen} onClose={close}>
-        <div className="fixed inset-0 z-10 w-screen overflow-y-auto">
-          <div className="flex min-h-full items-center justify-center p-4">
-            <DialogPanel
-              className="w-full max-w-md rounded-xl bg-white p-6 backdrop-blur-2xl duration-300 ease-out data-[closed]:transform-[scale(95%)] data-[closed]:opacity-0"
-            >
-             {title && <DialogTitle as="h3" className=" font-medium ">
+    <Dialog as="div" className="relative z-10 mx-5" open={isOpen} onClose={close}>
+      <div className="fixed inset-0 z-10 bg-black/30 overflow-y-auto">
+        <div className="flex min-h-full items-center justify-center p-5 ">
+          <DialogPanel className="w-full max-w-md rounded-xl bg-white p-8  shadow-lg">
+            {title && (
+              <DialogTitle as="h3" className="text-lg  m-5 font-medium text-gray-900 mb-4">
                 {title}
-                </DialogTitle>} 
-             
-              <div className="mt-4">
-             {children}
-              </div>
-            </DialogPanel>
-          </div>
+              </DialogTitle>
+            )}
+            <div className="mt-4 p-4 mx-7">
+              {children}
+            </div>
+          </DialogPanel>
         </div>
-      </Dialog>
-    </>
+      </div>
+    </Dialog>
   );
 };
 

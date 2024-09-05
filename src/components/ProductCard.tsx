@@ -39,8 +39,8 @@ const ProductCard = ({product}: IProps) => {
             
         </div>
         <div className="flex items-center justify-between space-x-2 ">
-            <Button className= "  bg-indigo-700  " width="w-full"  children={"Edit"}/>
-            <Button className="bg-red-700   " width="w-full"  children={"Delete"}/>
+            <Button className= "  bg-indigo-700 hover:bg-indigo-500  " width="w-full"  children={"Edit"}/>
+            <Button className="bg-red-700  hover:bg-red-500  " width="w-full"  children={"Delete"}/>
             
         </div>
         </div>
